@@ -21,7 +21,7 @@ main() {
 		echo -n "Enter a filename: "
 		read -r filename
 	fi
-	curl -s "https://memegen.link/$bg/$first/$second.jpg" >>"$filename" || return 1
+	wget -q0 "$filename" "https://memegen.link/$bg/$first/$second.jpg" || return 1
 	return 0
 }
 
